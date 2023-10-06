@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    position: absolute;
+    font-family: monospace;
+    font-size: 24px;
+    color: aliceblue;
+    bottom: 10px;
+    left: 25px;
+    display: none;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+    gap: 20px;
+}
+
+.panel {
+    flex: .5;
+    height: 80vh;
+    background-image: cover;
+    position: relative;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+
+.active {
+    cursor: auto;
+    flex: 5;
+}
+
+.active h3 {
+    display: block;
+}
