@@ -41,3 +41,22 @@ h3 {
 .active h3 {
     display: block;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+  }
+  
