@@ -1,23 +1,50 @@
-let sounds = ["applause", "boo", "gasp", "tada", "victory", "wrong"]
+// let sounds = ["applause", "boo", "gasp", "tada", "victory", "wrong"]
+
+// sounds.forEach(sound => {
+//     const btn = document.createElement("button")
+//     btn.classList.add("btn")
+
+//     btn.innerText = sound
+
+//     btn.addEventListener("click", () => {
+//         stopSongs()
+
+//         document.getElementById(sound).play()
+//     })
+
+//     document.getElementById("buttons").appendChild(btn)
+// })
+
+// function playsongs() {
+//     sounds.forEach(sound => {
+//         const song = document.getElementById(sound)
+//         song.play()
+//     })
+// }
+
+
+const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong']
 
 sounds.forEach(sound => {
-    const btn = document.createElement("button")
-    btn.classList.add("btn")
+    const btn = document.createElement('button')
+    btn.classList.add('btn')
 
     btn.innerText = sound
 
-    btn.addEventListener("click", () => {
+    btn.addEventListener('click', () => {
         stopSongs()
 
         document.getElementById(sound).play()
     })
 
-    document.getElementById("buttons").appendChild(btn)
+    document.getElementById('buttons').appendChild(btn)
 })
 
-function playsongs() {
+function stopSongs() {
     sounds.forEach(sound => {
         const song = document.getElementById(sound)
-        song.play()
+
+        song.pause()
+        song.currentTime = 0;
     })
 }

@@ -5,12 +5,14 @@ jokeBtn.addEventListener('click', makeJoke)
 
 makeJoke()
 
-function makeJoke() {
+async function makeJoke() {
     const config = {
         headers: {
-            Accept: 'event',
+            Accept: 'application/json',
         },
     }
 
-    let res = fetch('https://icanhazdadjoke.com', config)
+    let res = await fetch('https://icanhazdadjoke.com', config)
+    const data = await res.json()
+    joke.innerHTML = data.joke
 }
